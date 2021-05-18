@@ -1,20 +1,23 @@
 package com.company;
 
-public class Piece {
+public abstract class Piece {
     private boolean isWhite;
     private boolean isKilled;
+    private boolean hasEverMoved;
     private String name;
     private String color;
     private int xPosition;
-    private int yPostion;
+    private int yPosition;
 
-    public Piece (boolean isWhite, int xPosition, int yPostion){
+    public Piece (boolean isWhite, int xPosition, int yPosition){
 
         this.isWhite = isWhite;
         this.xPosition = xPosition;
-        this.yPostion = yPostion;
+        this.yPosition = yPosition;
         this.isKilled = false;
     }
+
+    public abstract boolean isMovePossible(int startingXPosition, int startingYPosition, int endingXPosition, int endingYPosition, Board board);
 
     public boolean isWhite() {
         return isWhite;
@@ -30,6 +33,14 @@ public class Piece {
 
     public void setKilled(boolean killed) {
         isKilled = killed;
+    }
+
+    public boolean isHasEverMoved() {
+        return hasEverMoved;
+    }
+
+    public void setHasEverMoved(boolean hasEverMoved) {
+        this.hasEverMoved = hasEverMoved;
     }
 
     public String getName() {
@@ -56,11 +67,15 @@ public class Piece {
         this.xPosition = xPosition;
     }
 
-    public int getyPostion() {
-        return yPostion;
+    public int getyPosition() {
+        return yPosition;
     }
 
-    public void setyPostion(int yPostion) {
-        this.yPostion = yPostion;
+    public void setyPosition(int yPosition) {
+        this.yPosition = yPosition;
     }
+
+
+
+
 }

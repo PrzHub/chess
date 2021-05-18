@@ -7,4 +7,9 @@ public class Knight extends Piece {
         super.setName("N");
     }
 
+    @Override
+    public boolean isMovePossible(int startingXPosition, int startingYPosition, int endingXPosition, int endingYPosition, Board board) {
+        return false;
+    }
+
 }

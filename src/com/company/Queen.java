@@ -6,4 +6,9 @@ public class Queen extends Piece {
         super(isWhite, xPosition, yPosition);
         super.setName("Q");
     }
+
+    @Override
+    public boolean isMovePossible(int startingXPosition, int startingYPosition, int endingXPosition, int endingYPosition, Board board) {
+        return false;
+    }
 }

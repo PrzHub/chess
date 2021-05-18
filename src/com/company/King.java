@@ -16,6 +16,11 @@ public class King extends Piece {
         super.setName("K");
     }
 
+    @Override
+    public boolean isMovePossible(int startingXPosition, int startingYPosition, int endingXPosition, int endingYPosition, Board board) {
+        return false;
+    }
+
     public boolean isHasEverMoved() {
         return hasEverMoved;
     }

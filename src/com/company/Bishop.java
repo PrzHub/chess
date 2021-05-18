@@ -6,4 +6,15 @@ public class Bishop extends Piece {
         super(isWhite, xPosition, yPosition);
         super.setName("B");
     }
+
+    @Override
+    public boolean isMovePossible(int startingXPosition, int startingYPosition, int endingXPosition, int endingYPosition, Board board) {
+
+
+
+
+
+        return false;
+    }
+
 }
