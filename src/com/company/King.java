@@ -18,6 +18,16 @@ public class King extends Piece {
 
     @Override
     public boolean isMovePossible(int startingXPosition, int startingYPosition, int endingXPosition, int endingYPosition, Board board) {
+
+        if (board.getBoard()[startingXPosition][startingYPosition] != null) {
+
+            if (Math.abs(endingXPosition - startingXPosition) <= 1 && Math.abs(endingYPosition - startingYPosition) <= 1) {
+                if (board.getBoard()[endingXPosition][endingYPosition] == null) {
+                    return true;
+                }
+            }
+            return false;
+        }
         return false;
     }
 

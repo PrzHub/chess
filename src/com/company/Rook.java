@@ -16,8 +16,6 @@ public class Rook extends Piece {
 
         // does piece exists?
         if (board.getBoard()[startingXPosition][startingYPosition] != null) {
-            // moving forward to not occupied tile:
-
             if (startingXPosition == endingXPosition) {
                 for (int i = 1; i <= Math.abs(endingYPosition - startingYPosition); i++) {
                     if (endingYPosition > startingYPosition) {

@@ -8,12 +8,19 @@ public class Main {
         board.createPieces();
         board.putPiecesOnStartingPositions();
 
+        board.makeAMove(3, 1, 3, 3);
+        board.makeAMove(2,0,5,3);
+        board.makeAMove(5,3,2,6);
+        board.makeAMove(3,0,3,2);
+        board.makeAMove(3,2,5,4);
+        board.makeAMove(5,4,4,5);
+        board.makeAMove(1,0,3,1);
+        board.makeAMove(3,1, 2, 3);
+        board.makeAMove(2,3, 3, 5);
+        board.makeAMove(3,5, 2, 7);
+        board.makeAMove(4,5,3,5);
+        board.makeAMove(2,7,3,5);
 
-        board.makeAMove(0,1,0,3);
-
-        board.displayBoard();
-
-        board.makeAMove(0,0,0,6);
 
         board.displayBoard();
 
